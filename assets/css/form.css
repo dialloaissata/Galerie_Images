@@ -1,0 +1,65 @@
+html,
+body {
+  height: 100%;
+  background-image: url("/assets/img/fond.jpg");
+  background-size: cover; /*l'image de fond couvre toute la page.*/
+  background-position: center;
+  opacity: 0.9;
+  display: grid;
+  grid-template-rows: 70px 1fr; /*Me cree 2 lignes, l'un a 70px et l'autre le reste*/
+}
+
+main {
+  display: flex; /* Cree à l'horizontale */
+  flex-wrap: wrap; /*Peuvent se repartir sur plusieurs lignes si l'ecran est petit*/
+  justify-content: space-between;
+}
+
+.form {
+  width: 100%; /* largeur du formulaire */
+  max-width: 800px; /* largeur maximale du formulaire */
+  margin: 50px; /*50px tout au tour du formulaire*/
+  background-color: #f2f2f2;
+  padding: 60px; /*Espace de 60px a l'interieur du form*/
+  border-radius: 10px;
+  box-sizing: border-box; /*Taille de la box*/
+  justify-content: center;
+}
+
+input[type="text"], /*Pour le nom*/
+input[type="email"], /*Pour l'email*/
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* ...........Mode Mobil..............   */
+@media all and (max-width: 742px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ...........Mode tablette..............   */
+@media all and (min-width: 743px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}

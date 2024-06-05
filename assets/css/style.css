@@ -1,0 +1,52 @@
+body {
+  margin: 2px;
+  padding: 0;
+}
+/* ...........Contenu des images..............   */
+
+#container {
+  display: grid;
+  grid-column-gap: 15px; /* l'espace entre les colonnes de la grille*/
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#container img {
+  width: 100%;
+  height: auto;
+  margin: 1em auto;
+}
+button {
+  background-color: #ff69b4;
+  border: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  display: block;
+  padding: 20px 30px;
+  font-size: 20px;
+  margin: 0 auto 20px;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+/* ...........Mode mobile..............   */
+
+@media all and (max-width: 742px) {
+  #container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ...........Mode tablette..............   */
+
+@media all and (min-width: 743px) and (max-width: 1023px) {
+  #container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
